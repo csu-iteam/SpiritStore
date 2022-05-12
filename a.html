@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>first</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .filter-property {
+
+            line-height: 20px;
+            background-color: #eeeeee;
+            height: 680px;
+            width: 190px;
+            float: left;
+            padding: 5px;
+
+        }
+
+        .filter-property li {
+            list-style: none;
+        }
+
+        .item-list {
+
+            height: auto;
+            margin-left: 200px;
+        }
+
+        table {
+
+            height: auto;
+            text-align: center;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 5px;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.pagination li {
+            display: inline;
+        }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SpriteStore</h1>
+</header>
+
+<div class="filter-property">
+    <h4>品牌</h4>
+    <ul data-property="proFunction">
+        <li><input type="checkbox" name="1" class="off">
+            <small>苹果</small>
+        </li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>联想</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.6M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.7M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.8M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>＞1.8M</small>
+            </a></li>
+    </ul>
+    </br>
+    <h4>功能</h4>
+    <ul data-property="proFunction">
+        <li><input type="checkbox" name="1" class="off">
+            <small>＜1.5M</small>
+        </li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.5M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.6M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.7M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.8M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>＞1.8M</small>
+            </a></li>
+    </ul>
+    </br>
+    <h4>款式</h4>
+    <ul data-property="proStyle">
+        <li><input type="checkbox" name="1" class="off">
+            <small>＜1.5M</small>
+        </li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.5M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.6M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.7M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>1.8M</small>
+            </a></li>
+        <li><input type="checkbox" name="1" class="off">
+            <small>＞1.8M</small>
+            </a></li>
+    </ul>
+</div>
+
+
+<section>
+    <div class="item-list">
+        <h1>商品列表</h1>
+        <div class="list" align="center">
+            <table cellspacing="10">
+                <tr>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div><img src="/Users/yzk/Desktop/1.png">
+                            <div>商品一</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div align="center">
+            <ul class="pagination">
+                <li><a href="#">«</a></li>
+                <li><a href="#">1</a></li>
+                <li><a class="active" href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">»</a></li>
+            </ul>
+
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    Copyright RSNDM
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>686 Adminize</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Le styles -->
+	<link href="http://fonts.googleapis.com/css?family=Oxygen|Marck+Script" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/font-awesome.css" rel="stylesheet">
+	<link href="assets/css/admin.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://cdn.bootcss.com/vue/2.4.1/vue.js"></script>
+	<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="row">
+
+		<div class="span2">
+
+			<div class="main-left-col">
+
+				<h1><i class="icon-shopping-cart icon-large"></i> SpriteStore</h1>
+
+				<ul class="side-nav">
+
+					<li >
+						<a href="index.html"><i class="icon-home"></i> 概况</a>
+					</li>
+					<li class="active">
+						<a href="UserQeury.html"><i class="icon-group"></i> 用户管理</a>
+					</li>
+					<li>
+						<a href="Classify.html" onclick="searchItemByName('')"><i class="icon-sitemap"></i> 分类管理</a>
+					</li>
+					<li>
+						<a  href="Product.html"><i class="icon-shopping-cart"></i> 商品管理</a>
+					</li>
+					<li >
+						<a  href="Order.html"><i class="icon-signal"></i> 订单管理 </a>
+					</li>
+
+				</ul>
+
+			</div> <!-- end main-left-col -->
+
+		</div> <!-- end span2 -->
+
+		<div class="span10">
+
+			<div class="secondary-masthead">
+
+				<ul class="nav nav-pills pull-right">
+					<li>
+						<!-- 此处是管理员名字-->
+						<a href="#"><i class="icon-globe"></i> View Website</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> John Smith <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Admin</a> <span class="divider">/</span>
+					</li>
+
+					<li class="active">SpriteStore</li>
+				</ul>
+
+			</div>
+
+			<div class="main-area dashboard">
+
+
+
+				<div class="row">
+
+
+                    <div class="span10">
+
+                        <div class="slate">
+
+                            <div class="page-header" style="margin: 0px;padding-bottom: 50px">
+                                <div>
+                                    <p style="font-size:18px;margin-top:13px;margin-left:8px;float: left;"> Users</p>
+                                    <div style="float: right;">
+                                        <input  align="right" type="text" style="margin-top:8px " class="input-large" placeholder="用户名" id="username">
+                                        <button style="margin-left: 0px;margin-right: 10px;margin-top:8px;float: right;" type="submit"  class="btn btn-default">用户名查询</button>
+                                        <button style="margin-left: 10px;margin-right: 10px;margin-top:8px;float: right;" type="submit"  class="btn btn-default">身份证查询</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <table class="orders-table table" id="userQueryTable">
+                                <thead>
+                                <tr>
+                                    <th>UserInfo</th>
+                                    <th class="actions">Operate</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr v-for="userInfo in userList">
+                                    <td>
+                                        {{userInfo.username}}
+                                    </td>
+                                    <td class="actions">
+                                        <a class="btn btn-small btn-default" style="margin-right: 5px" href="UserInfo.html"> 查看信息 </a>
+                                        <a class="btn btn-small btn-danger" style="margin-left: 5px" href="vieworder.html"> 删除用户 </a>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="span5">
+
+						<div class="pagination pull-left">
+							<ul>
+								<li><a href="#">Prev</a></li>
+								<li class="active">
+									<a href="#">1</a>
+								</li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">Next</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+				<div class="row">
+
+					<div class="span10 footer">
+
+						<p>&copy; Website Named SpriteStore</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div> <!-- end span10 -->
+
+	</div> <!-- end row -->
+
+</div> <!-- end container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.js"></script>
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

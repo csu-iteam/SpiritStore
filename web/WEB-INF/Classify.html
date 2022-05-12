@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>686 Adminize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://fonts.googleapis.com/css?family=Oxygen|Marck+Script" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/admin.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.4.1/vue.js"></script>
+    <script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+    <style type="text/css">
+
+        td{
+            font-size:15px;
+        }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="span2">
+
+            <div class="main-left-col">
+
+                <h1><i class="icon-shopping-cart icon-large"></i> SpriteStore</h1>
+
+                <ul class="side-nav">
+
+                    <li >
+                        <a href="index.html"><i class="icon-home"></i> 概况</a>
+                    </li>
+                    <li>
+                        <a href="UserQeury.html"><i class="icon-group"></i> 用户管理</a>
+                    </li>
+                    <li class="active">
+                        <a href="Classify.html"><i class="icon-sitemap"></i> 分类管理</a>
+                    </li>
+                    <li>
+                        <a  href="Product.html"><i class="icon-shopping-cart"></i> 商品管理</a>
+                    </li>
+                    <li >
+                        <a  href="Order.html"><i class="icon-signal"></i> 订单管理 </a>
+                    </li>
+
+                </ul>
+
+            </div> <!-- end main-left-col -->
+
+        </div> <!-- end span2 -->
+
+        <div class="span10">
+
+            <div class="secondary-masthead">
+
+                <ul class="nav nav-pills pull-right">
+                    <li>
+                        <!-- 此处是管理员名字-->
+                        <a href="#"><i class="icon-globe"></i> View Website</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> John Smith <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">Admin</a> <span class="divider">/</span>
+                    </li>
+
+                    <li class="active">SpriteStore</li>
+                </ul>
+
+            </div>
+
+            <div class="main-area dashboard">
+
+
+                <div class="row">
+
+                    <div class="span10">
+
+                        <div class="slate">
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="row">
+
+
+                    <div class="span10">
+
+                        <div class="slate">
+
+                            <div class="page-header">
+                                <h2>查询大分类</h2>
+                            </div>
+
+                            <form class="form-inline">
+                                <input type="text" class="input-large" id="major_input" placeholder="大分类名称">
+                                <button style="margin-left: 7px" type="submit" class="btn btn-default">查询</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+
+
+                    <div class="span10">
+
+                        <div class="slate">
+
+                            <div class="page-header">
+                                <h2>查询小分类</h2>
+                            </div>
+
+                            <form class="form-inline">
+                                <select class="span2">
+                                    <option value="">电脑</option>
+                                    <option value="">相机</option>
+                                    <option value="">手机</option>
+                                    <option value="">智能穿戴设备</option>
+                                    <option value="">外设</option>
+                                </select>
+                                <input type="text" class="input-large" placeholder="小分类名称">
+                                <button style="margin-left: 7px" type="submit" class="btn btn-default">查询</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+
+
+                    <div class="span10">
+
+                        <div class="slate">
+
+                            <div class="page-header">
+                                <h2>Classify</h2>
+                            </div>
+
+                            <table class="orders-table table">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th class="actions">Operate</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><a href="vieworder.html">电脑</a> </td>
+                                    <td class="actions">
+                                        <a class="btn btn-small btn-default" href="vieworder.html">删除分类</a>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+
+
+                    <div class="span10">
+
+                        <div class="slate">
+
+                            <div class="page-header">
+                                <h2>增加大分类</h2>
+                            </div>
+
+                            <form class="form-inline">
+                                <input type="text" class="input-large" placeholder="大分类名称">
+                                <button style="margin-left: 7px" type="submit" class="btn btn-default">增加</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+
+
+                    <div class="span10">
+
+                        <div class="slate">
+
+                            <div class="page-header">
+                                <h2>增加小分类</h2>
+                            </div>
+
+                            <form class="form-inline">
+                                <select class="span2">
+                                    <option value="">电脑</option>
+                                    <option value="">相机</option>
+                                    <option value="">手机</option>
+                                    <option value="">智能穿戴设备</option>
+                                    <option value="">外设</option>
+                                </select>
+                                <input type="text" class="input-large" placeholder="小分类名称">
+                                <button style="margin-left: 7px" type="submit" class="btn btn-default">增加</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+
+                    <div class="span10 footer">
+
+                        <p>&copy; Website Named SpriteStore</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> <!-- end span10 -->
+
+    </div> <!-- end row -->
+
+</div> <!-- end container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.js"></script>
+<script>
+
+</script>
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

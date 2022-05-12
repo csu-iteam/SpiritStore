@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    <title>686 Adminize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Le styles -->
+    <link href="http://fonts.googleapis.com/css?family=Oxygen|Marck+Script" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/admin.css" rel="stylesheet">
+	<style type="text/css">
+
+        td{
+            font-size:15px;
+        }
+	</style>
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>    
+<body>
+
+
+<div class="container">
+
+	<div class="row">
+
+		<div class="span2">
+
+			<div class="main-left-col">
+
+				<h1><i class="icon-shopping-cart icon-large"></i> SpriteStore</h1>
+
+				<ul class="side-nav">
+
+					<li >
+						<a href="index.html"><i class="icon-home"></i> 概况</a>
+					</li>
+					<li>
+						<a href="UserQeury.html"><i class="icon-group"></i> 用户管理</a>
+					</li>
+                    <li>
+						<a href="Classify.html"><i class="icon-sitemap"></i> 分类管理</a>
+                    </li>
+					<li class="active">
+						<a  href="Product.html"><i class="icon-shopping-cart"></i> 商品管理</a>
+					</li>
+					<li >
+						<a  href="Order.html"><i class="icon-signal"></i> 订单管理 </a>
+					</li>
+
+				</ul>
+
+			</div> <!-- end main-left-col -->
+
+		</div> <!-- end span2 -->
+
+		<div class="span10">
+
+			<div class="secondary-masthead">
+
+				<ul class="nav nav-pills pull-right">
+					<li>
+						<!-- 此处是管理员名字-->
+						<a href="#"><i class="icon-globe"></i> View Website</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> John Smith <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Admin</a> <span class="divider">/</span>
+					</li>
+
+					<li class="active">SpriteStore</li>
+				</ul>
+
+			</div>
+
+			<div class="main-area dashboard">
+
+
+				<div class="row">
+
+					<div class="span10">
+
+						<div class="slate">
+
+							<form class="form-inline">
+								<input type="text" class="input-large" placeholder="商品名称">
+								<select class="span2">
+									<option value="">电脑</option>
+									<option value="">相机</option>
+									<option value="">手机</option>
+									<option value="">智能穿戴设备</option>
+									<option value="">外设</option>
+								</select>
+								<select class="span2">
+									<option value="">XXXXX</option>
+									<option value="">XXXXX</option>
+									<option value="">XXXXX</option>
+									<option value="">XXXXX</option>
+								</select>
+								<button style="margin-left: 7px" type="submit" class="btn btn-default">查询</button>
+							</form>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="row">
+
+			
+			</div>
+
+				<div class="row">
+
+
+					<div class="span10">
+
+						<div class="slate">
+
+							<div class="page-header">
+								<h2>Product</h2>
+							</div>
+
+							<table class="Product-table table">
+								<thead>
+								<tr>
+									<th class="actions">名称</th>
+									<th class="actions">大分类</th>
+									<th class="actions">小分类</th>
+                                    <th class="actions">单价</th>
+                                    <th class="actions">库存数量</th>
+                                    <th class="actions">操作</th>
+								</tr>
+								</thead>
+								<tbody>
+                                <tr>
+                                    <td class="actions" >
+                                    <a>名称</a>
+                                    </td>
+									<td class="actions" >
+										<a>电脑</a>
+									</td>
+									<td class="actions">
+                                        <a>笔记本</a>
+                                    </td>
+                                    <td class="actions">
+                                        <a>$222</a>
+                                    </td>
+                                    <td class="actions">
+                                        <a>2000</a>
+                                    </td>
+									<td class="actions">
+										商品信息
+									</td>
+								</tr>
+                                <tr>
+                                    <td class="actions" >
+                                        <input type="text" class="input-mini" placeholder="商品名称">
+                                    </td>
+                                    <td class="actions" >
+                                        <select class="span2">
+                                            <option value="">电脑</option>
+                                            <option value="">相机</option>
+                                            <option value="">手机</option>
+                                            <option value="">智能穿戴设备</option>
+                                            <option value="">外设</option>
+                                        </select>
+                                    </td>
+                                    <td class="actions">
+                                        <select class="span2">
+                                            <option value="">XXXXX</option>
+                                            <option value="">XXXXX</option>
+                                            <option value="">XXXXX</option>
+                                            <option value="">XXXXX</option>
+                                        </select>
+                                    </td>
+                                    <td class="actions">
+                                        <input type="text" class="input-mini" placeholder="单价">
+                                    </td>
+                                    <td class="actions">
+                                        <input type="text" class="input-mini" placeholder="库存数量">
+                                    </td>
+                                    <td class="actions">
+                                        <a class="btn btn-small btn-default">修改信息</a>
+                                    </td>
+                                </tr>
+								</tbody>
+							</table>
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+			
+			<div class="row">
+				
+				<div class="span10">
+				
+					<div class="slate">
+					
+						<div class="page-header">
+							<h2>Product Delete</h2>
+						</div>
+					
+						<table class="orders-table table">
+						<thead>
+							<tr>
+								<th>名称</th>
+								<th class="actions">选定</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a>Dell</a> </td>
+								<td class="actions">
+									<input type="checkbox" />
+								</td>
+							</tr>
+						</tbody>
+						</table>
+
+					</div>
+                    <button class="btn btn-danger" style="float: right;">删除</button>
+				</div>
+				
+				<div class="span10 listing-buttons">
+				
+
+				
+				</div>
+				
+			</div>
+			
+
+			
+		<div class="row">
+		
+			<div class="span10 footer">
+			
+				<p>&copy; Website Named SpriteStore</p>
+			
+			</div>
+		
+		</div>
+		
+	</div>
+	
+	</div> <!-- end span10 -->
+		
+	</div> <!-- end row -->
+		
+</div> <!-- end container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
